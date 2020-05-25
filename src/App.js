@@ -1,5 +1,5 @@
 import React from 'react';
-import {GiphyGrid} from './giphy/giphy-grid.js';
+import {SearchGiphyGrid, TrendingGiphyGrid} from './giphy/giphy-grid.js';
 import {SearchForm} from './search-form.js';
 
 import logo from './logo.svg';
@@ -20,21 +20,53 @@ try {
   console.warn('No local config found.');
 }
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-      <nav className="navbar navbar-light bg-light">
-        <SearchForm />
-      </nav>
+    this.state = {
+      search_query: null,
+    };
 
-      <div className="row">
-        <div className="offset-md-4 col-md-4">
-          <GiphyGrid giphy_api_key={config.giphy_api_key} />
+    this.onSearchSubmit = this.onSearchSubmit.bind(this);
+  }
+
+  onSearchSubmit(ev) {
+    ev.preventDefault(); // TODO: Would prefer this be done earlier
+    let searchQuery = ev.target.search_query.value;
+    if (searchQuery === '') {
+      searchQuery = null;
+    }
+    this.setState({
+      search_query: searchQuery,
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+
+        <nav className="navbar navbar-light bg-light">
+          <SearchForm onSearchSubmit={this.onSearchSubmit} />
+        </nav>
+
+        <div className="row">
+          <div className="offset-md-4 col-md-4">
+            {
+              this.state.search_query === null ? (
+                <TrendingGiphyGrid giphy_api_key={config.giphy_api_key} />
+              ) : (
+                <SearchGiphyGrid
+                  giphy_api_key={config.giphy_api_key}
+                  search_query={this.state.search_query}
+                />
+              )
+            }
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
