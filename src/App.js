@@ -1,5 +1,7 @@
 import React from 'react';
 import {GiphyGrid} from './giphy/giphy-grid.js';
+import {SearchForm} from './search-form.js';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -21,6 +23,11 @@ try {
 function App() {
   return (
     <div className="App">
+
+      <nav className="navbar navbar-light bg-light">
+        <SearchForm />
+      </nav>
+
       <div className="row">
         <div className="offset-md-4 col-md-4">
           <GiphyGrid giphy_api_key={config.giphy_api_key} />
