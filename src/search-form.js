@@ -1,8 +1,18 @@
 import React from 'react';
 
 export const SearchForm = (props) => {
+  const onFormSubmit = (ev) => {
+      ev.preventDefault();
+      let searchQuery = ev.target.search_query.value;
+      if (searchQuery === '') {
+        searchQuery = null;
+      }
+
+      props.onSearchSubmit(searchQuery);
+  };
+
 	return (
-      <form className="form-inline" style={{flex:1}} onSubmit={props.onSearchSubmit}>
+      <form className="form-inline" style={{flex:1}} onSubmit={onFormSubmit}>
         <div className="input-group" style={{flex:1}}>
           <div className="input-group-prepend">
             <span className="input-group-text" id="basic-addon1">🎥</span>
