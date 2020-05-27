@@ -4,8 +4,8 @@ import {SearchForm} from '../components/search-form.js';
 // No state to map for this component
 const mapStateToProps = () => ({});
 
-const mapDispatchToProps = dispatch => ({
-  onSearchSubmit: (searchQuery) => {
+const mapDispatchToProps = (dispatch: Function) => ({
+  onSearchSubmit: (searchQuery: Number) => {
   	// Dispatch a PREPARE_SEARCH action
   	dispatch({type: 'PREPARE_SEARCH'});
     

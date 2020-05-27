@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {SyntheticEvent} from 'react';
 import PropTypes from 'prop-types';
+import { IGif } from '@giphy/js-types';
+import { GiphyFetch } from '@giphy/js-fetch-api'
 import { Grid } from '@giphy/react-components';
 import './giphy-grid.css';
 
-const GiphyGridComponent = ({giphy_fetch, search_query, on_gif_select}) => {
+const GiphyGridComponent = ({
+	giphy_fetch, search_query, on_gif_select
+} : {
+	giphy_fetch: GiphyFetch,
+	search_query: string,
+	on_gif_select: Function,
+}) => {
 	let fetchGifs = null;
 	if (search_query === null) {
 		fetchGifs = (offset: number) => giphy_fetch.trending({ offset, limit: 10 });
@@ -36,6 +44,11 @@ GiphyGridComponent.propTypes = {
  */
 const GiphyGrid = ({
   giphy_fetch, search_query, on_gif_select, is_preparing_search
+} : {
+	giphy_fetch: GiphyFetch,
+	search_query: string,
+	on_gif_select: Function,
+	is_preparing_search: boolean,
 }) => {
   if (is_preparing_search) {
     return (<div className="text-center"><img src="/45.svg" alt="loading"/></div>);

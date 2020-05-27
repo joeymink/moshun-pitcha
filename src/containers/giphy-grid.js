@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import GiphyGrid from '../components/giphy-grid.js';
+import GiphyGrid from '../components/giphy-grid.tsx';
 
 const mapStateToProps = state => ({
   giphy_fetch: state.giphy_fetch,

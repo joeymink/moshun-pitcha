@@ -1,6 +1,6 @@
 import React from 'react';
 import GiphyGrid from './containers/giphy-grid.js';
-import SearchForm from './containers/search-form.js';
+import SearchForm from './containers/search-form.tsx';
 import FullScreenGif from './containers/full-screen-gif.js';
 
 const App = () => (
