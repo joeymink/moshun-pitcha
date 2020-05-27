@@ -6,7 +6,15 @@ const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => ({
   onSearchSubmit: (searchQuery) => {
-    dispatch({type: 'SEARCH', search_query: searchQuery});
+  	// Dispatch a PREPARE_SEARCH action
+  	dispatch({type: 'PREPARE_SEARCH'});
+    
+    // Then schedule a SEARCH action.
+    // Supports a UX hack that ensures the giphy
+    // grid repaints between searches.
+    setTimeout(() => {
+    	dispatch({type: 'SEARCH', search_query: searchQuery})
+    }, 1000);
   }
 });
 
