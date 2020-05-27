@@ -15,7 +15,7 @@ export const SearchForm = (props) => {
       <form className="form-inline" style={{flex:1}} onSubmit={onFormSubmit}>
         <div className="input-group" style={{flex:1}}>
           <div className="input-group-prepend">
-            <span className="input-group-text" id="basic-addon1">🎥</span>
+            <span className="input-group-text" id="basic-addon1" role="img" aria-label="video camera">🎥</span>
           </div>
           <input type="text" className="form-control"
           	placeholder="Search for GIFs" aria-label="Image Search"

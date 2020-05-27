@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Modal} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 import './full-screen-gif.css';
 
 export default ({selected_gif, on_close_gif}) => {
@@ -20,7 +20,7 @@ export default ({selected_gif, on_close_gif}) => {
         <Modal.Body className="bg-dark">
 					<div className="embed-responsive embed-responsive-16by9">
 					  <iframe className="embed-responsive-item" src={selected_gif}
-					  	allowFullScreen></iframe>
+					  	allowFullScreen title="Selected Giphy"></iframe>
 					</div>
         </Modal.Body>
       </Modal>
