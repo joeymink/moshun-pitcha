@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {SearchForm} from '../search-form.js';
+import {SearchForm} from '../components/search-form.js';
 
 // No state to map for this component
 const mapStateToProps = () => {{}};
