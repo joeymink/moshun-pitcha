@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Modal} from 'react-bootstrap';
 import './full-screen-gif.css';
 
-export default ({selected_gif, on_close_gif}) => {
+const FullScreenGif = ({selected_gif, on_close_gif}) => {
 	if (selected_gif === null) {
 		return null;
 	} else {
@@ -24,6 +25,13 @@ export default ({selected_gif, on_close_gif}) => {
 					</div>
         </Modal.Body>
       </Modal>
-	);
+    );
 	}
 };
+
+FullScreenGif.propTypes = {
+  selected_gif: PropTypes.object,
+  on_close_gif: PropTypes.func,
+};
+
+export default FullScreenGif;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Grid } from '@giphy/react-components';
 import './giphy-grid.css';
 
@@ -23,11 +24,17 @@ const GiphyGridComponent = ({giphy_fetch, search_query, on_gif_select}) => {
 	);	
 };
 
+GiphyGridComponent.propTypes = {
+  giphy_fetch: PropTypes.object,
+  search_query: PropTypes.string,
+  on_gif_select: PropTypes.func,
+};
+
 /**
  * Wrapper component that covers all of our cases for the
  * giphy grid presentation area
  */
-export default ({
+const GiphyGrid = ({
   giphy_fetch, search_query, on_gif_select, is_preparing_search
 }) => {
   if (is_preparing_search) {
@@ -42,3 +49,12 @@ export default ({
     );
   }
 };
+
+GiphyGrid.propTypes = {
+  giphy_fetch: PropTypes.object,
+  search_query: PropTypes.string,
+  on_gif_select: PropTypes.func,
+  is_preparing_search: PropTypes.bool,
+};
+
+export default GiphyGrid;

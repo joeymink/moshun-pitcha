@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const SearchForm = (props) => {
+export const SearchForm = ({onSearchSubmit}) => {
   const onFormSubmit = (ev) => {
       ev.preventDefault();
       let searchQuery = ev.target.search_query.value;
@@ -8,7 +9,7 @@ export const SearchForm = (props) => {
         searchQuery = null;
       }
 
-      props.onSearchSubmit(searchQuery);
+      onSearchSubmit(searchQuery);
   };
 
 	return (
@@ -26,4 +27,8 @@ export const SearchForm = (props) => {
         </div>
       </form>
   );
+};
+
+SearchForm.propTypes = {
+  onSearchSubmit: PropTypes.func,
 };
