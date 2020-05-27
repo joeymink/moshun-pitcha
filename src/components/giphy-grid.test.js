@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import GiphyGrid from './giphy-grid.js';
+import GiphyGrid from './giphy-grid.tsx';
 
 test('default state renders trending use case', () => {
   const { getByText } = render(

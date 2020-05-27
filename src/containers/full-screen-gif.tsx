@@ -1,11 +1,15 @@
 import { connect } from 'react-redux';
-import FullScreenGif from '../components/full-screen-gif.js';
+import FullScreenGif from '../components/full-screen-gif';
 
-const mapStateToProps = state => ({
+interface RootState {
+  selected_gif: string,
+};
+
+const mapStateToProps = (state: RootState) => ({
   selected_gif: state.selected_gif,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   on_close_gif: () => {
     dispatch({type: 'GIF_DESELECT'});
   }
