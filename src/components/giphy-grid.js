@@ -9,7 +9,7 @@ export default ({giphy_api_key, search_query, on_gif_select}) => {
 	if (search_query === null) {
 		fetchGifs = (offset: number) => gf.trending({ offset, limit: 10 });
 	} else {
-		fetchGifs = (query: str) => gf.search(search_query);
+		fetchGifs = (offset: number) => gf.search(search_query, { offset, limit: 10 });
 	}
 
 	const onGifClick = (gif: IGif, e: SyntheticEvent<HTMLElement, Event>) => {
