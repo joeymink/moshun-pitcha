@@ -1,3 +1,5 @@
+import { GiphyFetch } from '@giphy/js-fetch-api';
+
 /**
   App Configuration
  **/
@@ -19,6 +21,8 @@ try {
 
 const initialState = {
   config: config,
+
+  giphy_fetch: new GiphyFetch(config.giphy_api_key),
 
   // Supports a UX hack to ensure we force a
   // repaint of the giphy search grid between

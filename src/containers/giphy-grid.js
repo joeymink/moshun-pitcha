@@ -1,9 +1,8 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import GiphyGrid from '../components/giphy-grid.js';
 
 const mapStateToProps = state => ({
-  giphy_api_key: state.config.giphy_api_key,
+  giphy_fetch: state.giphy_fetch,
   search_query: state.search_query,
   is_preparing_search: state.is_preparing_search,
 });
