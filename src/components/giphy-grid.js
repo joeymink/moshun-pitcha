@@ -13,7 +13,10 @@ export const TrendingGiphyGrid = (props) => {
 	}
 
 	return (
-		<Grid width={400} columns={2} fetchGifs={fetchGifs} onGifClick={onGifClick} />
+		<div className="text-center">
+			<h3>Trending</h3>
+			<Grid width={400} columns={2} fetchGifs={fetchGifs} onGifClick={onGifClick} />
+		</div>
 	);
 };
 
@@ -26,9 +29,8 @@ export const SearchGiphyGrid = ({giphy_api_key, search_query}) => {
 	const fetchGifs = (query: str) => gf.search(search_query);
 
 	return (
-		<div>
-			<h2>{search_query}</h2>
-			{ /* For some reason, React will not repaint this on search changes */ }
+		<div className="text-center">
+			<h3>{search_query}</h3>
 			<Grid width={400} columns={2} fetchGifs={fetchGifs} data-search-query={search_query}/>
 		</div>
 	);
