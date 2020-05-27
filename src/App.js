@@ -1,5 +1,5 @@
 import React from 'react';
-import GiphyGrid from './containers/giphy-grid.js';
+import GiphyGrid from './containers/giphy-grid.tsx';
 import SearchForm from './containers/search-form.tsx';
 import FullScreenGif from './containers/full-screen-gif.js';
 
