@@ -10,7 +10,7 @@ const GiphyGrid = ({
   giphy_api_key, search_query, on_gif_select, is_preparing_search
 }) => {
   if (is_preparing_search) {
-    return <div className="text-center"><img src="/45.svg" /></div>
+    return <div className="text-center"><img src="/45.svg" alt="loading"/></div>
   } else {
     return (
       <GiphyGridComponent
