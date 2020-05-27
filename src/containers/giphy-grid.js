@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {TrendingGiphyGrid, SearchGiphyGrid} from '../giphy/giphy-grid.js';
+import {TrendingGiphyGrid, SearchGiphyGrid} from '../components/giphy-grid.js';
 
 const GiphyGrid = ({giphy_api_key, search_query, on_gif_select}) => (
   <div> {

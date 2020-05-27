@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import FullScreenGif from '../full-screen-gif.js';
+import FullScreenGif from '../components/full-screen-gif.js';
 
 const mapStateToProps = state => ({
   selected_gif: state.selected_gif,
