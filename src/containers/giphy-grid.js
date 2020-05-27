@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {TrendingGiphyGrid, SearchGiphyGrid} from '../components/giphy-grid.js';
+import GiphyGridComponent from '../components/giphy-grid.js';
 
 /**
  * Wrapper component that covers all of our cases for the
@@ -13,16 +13,11 @@ const GiphyGrid = ({
     return <div className="text-center"><img src="/45.svg" /></div>
   } else {
     return (
-      <div> {
-        search_query === null ? (
-          <TrendingGiphyGrid giphy_api_key={giphy_api_key} on_gif_select={on_gif_select} />
-        ) : (
-          <SearchGiphyGrid
-            giphy_api_key={giphy_api_key}
-            search_query={search_query}
-          />
-        )
-      } </div>
+      <GiphyGridComponent
+        giphy_api_key={giphy_api_key}
+        on_gif_select={on_gif_select}
+        search_query={search_query}
+      />
     );
   }
 };
