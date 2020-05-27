@@ -34,7 +34,13 @@ const initialState = {
   selected_gif: null,
 };
 
-export default (state = initialState, action) => {
+interface ActionType {
+  type: string,
+  search_query: string,
+  selected_gif: string,
+}
+
+export default (state = initialState, action: ActionType) => {
   switch (action.type) {
     case 'SEARCH':
       return { ...state, search_query: action.search_query, is_preparing_search: false };
