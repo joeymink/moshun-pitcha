@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {SearchForm} from '../search-form.js';
 
 // No state to map for this component
-const mapStateToProps = () => {};
+const mapStateToProps = () => {{}};
 
 const mapDispatchToProps = dispatch => ({
   onSearchSubmit: (searchQuery) => {
