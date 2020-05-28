@@ -1,4 +1,4 @@
-## moshun-pitch
+## moshun-pitcha
 
 A simply giphy browser using React, Redux, and some TypeScript
 
