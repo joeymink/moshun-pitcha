@@ -1,6 +1,6 @@
 ## moshun-pitcha
 
-A simpl giphy browser using React, Redux, and some TypeScript
+A simple giphy browser using React, Redux, and some TypeScript
 
 ### If I spent more time on this, I would ...
 
