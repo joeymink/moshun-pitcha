@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { SearchForm } from './search-form.js';
+import { SearchForm } from './search-form.tsx';
 
 test('form submission calls expected function', () => {
   const onSubmitFn = jest.fn();

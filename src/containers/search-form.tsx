@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {SearchForm} from '../components/search-form.js';
+import {SearchForm} from '../components/search-form';
 
 // No state to map for this component
 const mapStateToProps = () => ({});
