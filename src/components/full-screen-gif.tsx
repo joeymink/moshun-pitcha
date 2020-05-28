@@ -14,7 +14,7 @@ const FullScreenGif = ({selected_gif, on_close_gif} : {
       	dialogClassName="modal-90w"
       	onHide={
       		// A cheat, as onHide will be triggered again as a result
-      		// of this component re-rendering from a dispatched
+      		// of this component re-rendering from a dispatched GIF_DESELECT
       		()=>{setTimeout(on_close_gif, 0)}
       	}
       	backdrop={true}
