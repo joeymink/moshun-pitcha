@@ -26,7 +26,7 @@ const GiphyGridComponent = ({
 
 	return (
 		<div className="text-center">
-			<h3>{search_query === null? 'Trending' : search_query}</h3>
+			<div className="description mb-2 mt-2">{search_query === null? 'Trending' : search_query}</div>
 			<Grid width={400} columns={2} fetchGifs={fetchGifs} onGifClick={onGifClick} />
 		</div>
 	);	
@@ -51,7 +51,7 @@ const GiphyGrid = ({
 	is_preparing_search: boolean,
 }) => {
   if (is_preparing_search) {
-    return (<div className="text-center"><img src="/45.svg" alt="loading"/></div>);
+    return (<div className="text-center mt-3"><img src="/45.svg" alt="loading"/></div>);
   } else {
     return (
       <GiphyGridComponent
