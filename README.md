@@ -1,6 +1,6 @@
 ## moshun-pitcha
 
-A simply giphy browser using React, Redux, and some TypeScript
+A simpl giphy browser using React, Redux, and some TypeScript
 
 ### If I spent more time on this, I would ...
 
@@ -13,15 +13,16 @@ I didn't fully understand some of the inconsistencies I ran into between the two
 different typing systems.
 
 Dig deeper into Giphy's Grid react component, and potentially rewrite it. Because
-it takes a function as a property, React isn't convinced a change in state need a
+it takes a function as a property, React isn't convinced a change in state
+necessitates a
 re-render for the Giphy component. I got around this by forcing a fabricated
-"loading" state for one second. But that was just to force a re-render of Giphy
-grid component.
+"loading" state for one second. But that was just to ensure the re-render of Giphy
+grid component when a search query is submitted.
 
 Improve testing. Only the absolute base-cases are covered, and only for the
-lead-node components.
+leaf node components.
 
-The search form's text input should be a managed component (capture state with
+Update the search form's text input to be a managed component (capture state with
 every character typed).
 
 Replace the modal with a better experience. Either use a separate view entirely
@@ -36,4 +37,4 @@ Come up with a logo and a better name. Everyone loves some branding!
 
 ### Credit
 
-- 45.svg is from https://icons8.com/preloaders/
+- `45.svg` is from https://icons8.com/preloaders/
