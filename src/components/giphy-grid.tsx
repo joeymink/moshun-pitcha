@@ -63,17 +63,4 @@ const GiphyGrid = ({
   }
 };
 
-/*
-
-Haven't figured out yet how to map upstream redux connector types to these...
-
-GiphyGrid.propTypes = {
-  giphy_fetch: GiphyFetch,
-  search_query: PropTypes.string,
-  on_gif_select: PropTypes.func,
-  is_preparing_search: PropTypes.bool,
-};
-
-*/
-
 export default GiphyGrid;

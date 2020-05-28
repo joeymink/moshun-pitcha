@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {Modal} from 'react-bootstrap';
 import './full-screen-gif.css';
 
@@ -30,16 +29,5 @@ const FullScreenGif = ({selected_gif, on_close_gif} : {
     );
 	}
 };
-
-/*
-
-Haven't figured out yet how to map upstream redux connector types to these...
-
-FullScreenGif.propTypes = {
-  selected_gif: PropTypes.string,
-  on_close_gif: PropTypes.func,
-};
-
-*/
 
 export default FullScreenGif;
